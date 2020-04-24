@@ -10,6 +10,7 @@ print("\n Initializing face capture. Look the camera and wait ....")
 # Initialize individual sampling face count
 count = 0
 while(True):
+    print("Things are starting")
     ret, img = cam.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_detector.detectMultiScale(gray, 1.3, 5)
@@ -25,6 +26,6 @@ while(True):
     elif count >= 30: # Take 30 face sample and stop video
          break
 # Do a bit of cleanup
-print("\n [INFO] Exiting Program and cleanup stuff")
+print("\n [INFO] Exiting Programs and cleanup stuff")
 cam.release()
 cv2.destroyAllWindows()
